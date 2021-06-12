@@ -1,0 +1,21 @@
+:root {
+  --white: #fff;
+  --black: #333;
+  --blue: #69A3FF;
+  --yellow: #FF9632;
+  --red: #ED1946;
+  --gray: #B4B4B4;
+  --dark-gray: #737C84;
+  --background: #F1F1F1;
+  --divider: #EBEBEB;
+  --box-shadow-color:#3333331a;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial;
+}

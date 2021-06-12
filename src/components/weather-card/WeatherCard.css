@@ -1,0 +1,110 @@
+@media (max-width: 801px) {
+  section {
+    margin: 1.5rem auto;
+  }
+}
+
+section {
+  height: 15rem;
+  width: 17rem;
+  display: grid;
+  grid-template-rows: 2.5rem auto 2.5rem;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: 0 0 1rem var(--box-shadow-color);
+}
+
+.card-more-info {
+  height: 18rem;
+  grid-template-rows: 2.5rem auto 5rem;
+}
+
+.card-more-info > .card-footer {
+  padding-bottom: 1rem;
+}
+
+.card-header,
+.card-body-error-button {
+  color: var(--dark-gray);
+}
+
+.card-body,
+.card-header,
+.card-footer,
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-header,
+.card-footer {
+  height: 100%;
+}
+
+.card-header {
+  font-weight: normal;
+  border-bottom: 2px solid var(--divider);
+  margin: 0;
+}
+
+.card-body {
+  font-size: 5rem;
+}
+
+.cold {
+  color: var(--blue);
+}
+
+.warm {
+  color: var(--yellow);
+}
+
+.hot {
+  color: var(--red);
+}
+
+.card-footer {
+  flex-wrap: wrap;
+  font-size: 10px;
+  color: var(--dark-gray);
+  background-color: var(--background);
+  opacity: 50%;
+}
+
+.card-extra-info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 2rem;
+}
+
+.card-extra-info > h3 {
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.card-extra-info > h2 {
+  color: var(--black);
+  margin: 0;
+}
+
+.card-body-error-message {
+  font-weight: 400;
+  color: var(--red);
+}
+
+.card-body-error-button {
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  background-color: var(--white);
+  border: 2px solid var(--dark-gray);
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.card-body-error-button:active {
+  opacity: 80%;
+}

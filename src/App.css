@@ -1,0 +1,27 @@
+.App {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 4rem auto;
+  background-color: var(--background);
+}
+
+#logo {
+  width: 10rem;
+}
+
+main {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 3rem;
+  margin: 0 auto;
+  overflow-y: auto;
+}
+
+@media (max-width: 801px) {
+  main {
+    width: auto;
+    display: inline-block;
+  }
+}
