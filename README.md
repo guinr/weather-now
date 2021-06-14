@@ -1,6 +1,6 @@
 # Projeto rodando
 
-Esse projeto pode ser encontrado no [seguinte link](https://github.com/facebook/create-react-app).
+Esse projeto pode ser encontrado no [seguinte link](https://weathernow-gnr.netlify.app/).
 
 ## Como rodar o projeto local
 
