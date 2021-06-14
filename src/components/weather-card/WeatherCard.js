@@ -17,9 +17,10 @@ function WeatherCard(props) {
 
     const getData = async () => {
       setLoadedCity(undefined);
-      await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city.name},${city.country}&APPID=${apiKey}`)
-      .then(response => {
-        const info = response.data.main
+
+      try {
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city.name},${city.country}&APPID=${apiKey}`)
+        const info = response.data.main;
 
         city.lastUpdated = new Date();
         city.temp = convertKelvinToCelsius(info.temp);
@@ -28,11 +29,9 @@ function WeatherCard(props) {
 
         setLoadedCity(city)
         localStorage.setItem(city.name, JSON.stringify(city));
-      })
-      .catch(error => {
-        console.error(error)
+      } catch (error) {
         setLoadedCity({ error })
-      });
+      }
     }
 
     const cached = localStorage.getItem(city.name);
@@ -88,7 +87,7 @@ function WeatherCard(props) {
   const renderInfo = () => {
     return (
       <>
-        <div className={`card-body ${getColorByTemperature(loadedCity.temp)}`}>{loadedCity.temp}º</div>
+        <div className={`card-body ${getColorByTemperature(loadedCity.temp)}`}>{loadedCity.temp}°</div>
         <footer className="card-footer">
           {loadedCity.moreInfo && renderCardMoreInfo()}
           <span>Updated at {formatAMPM(loadedCity.lastUpdated)}</span>
@@ -100,7 +99,7 @@ function WeatherCard(props) {
   const renderLoader = () => {
     return (
       <figure className="loader">
-        <img src={loader} alt="loader" />
+        <img src={loader} alt="Loader" />
       </figure>
     )
   }
