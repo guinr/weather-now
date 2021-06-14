@@ -71,7 +71,7 @@ section {
   font-size: 10px;
   color: var(--dark-gray);
   background-color: var(--background);
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .card-extra-info {
